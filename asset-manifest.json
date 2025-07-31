@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.55a8c8a5.css",
-    "main.js": "/personal-website/static/js/main.48154238.js",
+    "main.css": "/personal-website/static/css/main.523c9d1c.css",
+    "main.js": "/personal-website/static/js/main.6be0e949.js",
     "static/js/453.ee5807c3.chunk.js": "/personal-website/static/js/453.ee5807c3.chunk.js",
+    "static/media/costaRicaFishing.png": "/personal-website/static/media/costaRicaFishing.ea66a8bd3b1f3e5985a5.png",
+    "static/media/MTS2025.jpg": "/personal-website/static/media/MTS2025.b68db71fb9837f3bbf19.jpg",
+    "static/media/HOAGhalf.jpeg": "/personal-website/static/media/HOAGhalf.d5a89b25966bfa70f9e7.jpeg",
     "index.html": "/personal-website/index.html",
-    "main.55a8c8a5.css.map": "/personal-website/static/css/main.55a8c8a5.css.map",
-    "main.48154238.js.map": "/personal-website/static/js/main.48154238.js.map",
+    "main.523c9d1c.css.map": "/personal-website/static/css/main.523c9d1c.css.map",
+    "main.6be0e949.js.map": "/personal-website/static/js/main.6be0e949.js.map",
     "453.ee5807c3.chunk.js.map": "/personal-website/static/js/453.ee5807c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55a8c8a5.css",
-    "static/js/main.48154238.js"
+    "static/css/main.523c9d1c.css",
+    "static/js/main.6be0e949.js"
   ]
 }
