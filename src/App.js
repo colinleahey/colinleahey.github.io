@@ -1,49 +1,59 @@
+// src/App.js - FINAL SIMPLIFIED VERSION
 import './App.css';
+import Navbar from './Navbar';
+import Hero from './Hero';
 
 function App() {
   return (
-    <div className="App">
-      {/* Header Section */}
-      <header className="header">
+    <>
+      <Navbar /> 
+      <Hero /> 
+
+      <section className="intro-section">
         <h1>Colin Leahey</h1>
-        <p>Economics & Data Science Student at USC</p>
-      </header>
-
-      {/* About Section */}
-      <section className="about">
-        <h2>About Me</h2>
-        <p>
-          I'm a student at the University of Southern California pursuing finishing up my BS in Economics
-          & Data Science while working on a MS in Applied Data Science. I'm passionate about using data to 
-          solve problems and enjoy triathlon training in my free time.
-        </p>
-      </section>
-
-      {/* Projects Section */}
-      <section className="projects">
-        <h2>Projects</h2>
-        <div className="project">
-          <h3>DSCI551-ChatDB</h3>
-          <p>A database chatbot that lets users query databases using natural language.</p>
-          <p><strong>Technologies:</strong> Python, MongoDB, SQL, Natural Language Processing</p>
-        </div>
-        <div className="project">
-          <h3>DSCI351-ChatDB</h3>
-          <p>An improved version with better query processing and user experience.</p>
-          <p><strong>Technologies:</strong> Python, Machine Learning, SQL</p>
+        <p>BS in Economics & Data Science</p>
+        <p>MS in Applied Data Science</p>
+        <div className="links">
+          <a href="https://www.linkedin.com/in/colin-leahey/" target="_blank" rel="noopener noreferrer" className="button-link">LinkedIn</a>
+          <a href="https://github.com/colinleahey" target="_blank" rel="noopener noreferrer" className="button-link">GitHub</a>
         </div>
       </section>
+      
+      {/* All other content follows below */}
+      <main className="main-content">
+        <section id="about" className="content-section">
+          <h2>About Me</h2>
+          <p>
+            This is placeholder text for the about me section. I will fill this out later with a short blurb about my passions, skills, and professional goals.
+          </p>
+        </section>
 
-      {/* Contact Section */}
-      <section className="contact">
-        <h2>Contact</h2>
-        <div className="contact-links">
-          <a href="mailto:cleahey@usc.edu">Email</a>
-          <a href="https://www.linkedin.com/in/colin-leahey/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/colinleahey" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </section>
-    </div>
+        <section id="projects" className="content-section">
+          <h2>Projects</h2>
+          <div className="project">
+            <h3>ChatDB</h3>
+            <p>A database chatbot that lets users query databases using natural language.</p>
+            <p><strong>Technologies:</strong> Python, MongoDB, SQL, Natural Language Processing</p>
+          </div>
+        </section>
+
+        <section id="career" className="content-section">
+          <h2>Career</h2>
+          <p>
+            This is placeholder text for the career section. I will add my work experience and career objectives here later.
+          </p>
+        </section>
+
+        <section className="content-section">
+          <h2>Contact</h2>
+          <div className="contact-links">
+            <a href="mailto:cleahey@usc.edu">Email</a>
+            <a href="https://www.linkedin.com/in/colin-leahey/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/colinleahey" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 
