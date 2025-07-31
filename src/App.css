@@ -1,107 +1,173 @@
-/* src/App.css*/
-
-/* --- 1. Basic Reset and Global Styles --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+/* src/App.css */
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
+  padding-top: 54px; /* add offset for the navbar */
 }
 
-/* --- 2. Navigation Bar Styles --- */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(3px);
-  z-index: 1000;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: flex-end;
-  border-bottom: 0px solid #eee;
+/* 2. Custom Navbar Styles */
+.navbar-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.navbar ul { list-style: none; display: flex; gap: 30px; }
-.navbar a { text-decoration: none; color: #333; font-weight: bold; font-size: 1rem; transition: color 0.3s ease; }
-.navbar a:hover { color: #dc2626; }
-
-/* --- 3. Slideshow and Intro Section Styles --- */
-.slideshow-container {
-  height: 50vh; /* Sets the slideshow height to x% of the viewport height */
-  width: 100%;
-  background-color: #333; /* Fallback background color */
+/* 3. Hero Carousel Styles */
+.hero-carousel-item {
+  height: 60vh; /* Set height for carousel items */
+  min-height: 400px;
 }
 
-.slideshow-container .hero-slideshow,
-.slideshow-container .hero-slideshow img {
-  width: 100%;
+.hero-carousel-item img {
   height: 100%;
   object-fit: cover;
 }
 
-.intro-section {
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 15px;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #eee;
-}
 
-.intro-section h1 { font-size: 2.5rem; margin-bottom: 1px; }
-.intro-section p { font-size: 1.2rem; color: #666; line-height: 1.5; }
-.intro-section .links { margin-top: 25px; }
-.intro-section .button-link {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 12px 25px;
-  border: 2px solid #555;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  margin: 0 10px;
-}
-.intro-section .button-link:hover { background: #dc2626; color: white; border: white;}
-
-/* --- 4. Main Content Area Styles --- */
-.main-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.content-section {
-  padding-top: 60px;
-  margin-top: -60px;
-  margin-bottom: 40px;
-}
-
-.content-section h2 {
-  font-size: 1.8rem;
+/* 4. Visual About Me Section Styles */
+.about-me-title h2 {
+  position: relative;
+  display: inline-block;
   margin-bottom: 20px;
-  border-left: 4px solid #dc2626; 
-  padding-left: 15px;
+  font-size: 2rem;
 }
 
-/* --- 5. Project and Contact Styles --- */
-.project { background: #f9f9f9; padding: 20px; margin-bottom: 20px; border-radius: 5px; border-left: 4px solid #dc2626; }
-.project h3 { color: #1a1a1a; margin-bottom: 10px; }
-.contact-links { display: flex; gap: 20px; flex-wrap: wrap; }
-.contact-links a {
-  color: #dc2626;
+.about-me-title h2::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #dc2626;
+  border-radius: 2px;
+}
+
+.profile-headshot {
+  width: 160px;
+  height: 160px;
+  border: 4px solid #f0f0f0;
+}
+
+.about-me-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: #dc2626;
+  color: white;
+  border-radius: 50%;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 15px;
-  border: 2px solid #dc2626;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
 }
-.contact-links a:hover { background: #dc2626; color: white; }
+
+.about-me-links a:hover {
+  transform: scale(1.1);
+}
+
+.about-me-description {
+  color: grey;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* 5. Vertical Timeline Styles */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* The central line of the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: grey;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* timeline circle */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #dc2626;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Position odd items on the left */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right; 
+}
+
+/* position even items on the right */
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+
+.timeline-item:nth-child(even)::after {
+  left: -12px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.timeline-content .timeline-date {
+  font-weight: 500;
+  color: #dc2626;
+}
+
+/* --- 6. Projects Section Styles --- */
+.project-card {
+  border: 1px solid #e9ecef; 
+  border-left: 5px solid #dc2626;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* moves the card on mouse hover */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-card .card-title {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.tech-badge {
+  background-color: #dc2626 !important; 
+  color: white !important;
+  font-size: 0.8rem;
+  padding: 0.4em 0.8em;
+}

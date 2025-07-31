@@ -1,58 +1,74 @@
-// src/App.js - FINAL SIMPLIFIED VERSION
+// src/App.js
 import './App.css';
-import Navbar from './Navbar';
-import Hero from './Hero';
+import AppNavbar from './Navbar'; 
+import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
+import CareerTimeline from './CareerTimeline';
+import Projects from './Projects';
+
+//Add actual Headshot!!!!!!
+import professionalHeadshot from './assets/MTS2025.jpg';
+import triathlonImg from './assets/triathlon.png';
+import halfMarathonImg from './assets/halfMarathon.jpg';
+import fishingImg from './assets/costaRicaFishing.png';
 
 function App() {
   return (
     <>
-      <Navbar /> 
-      <Hero /> 
+      <AppNavbar />
 
-      <section className="intro-section">
-        <h1>Colin Leahey</h1>
-        <p>BS in Economics & Data Science</p>
-        <p>MS in Applied Data Science</p>
-        <div className="links">
-          <a href="https://www.linkedin.com/in/colin-leahey/" target="_blank" rel="noopener noreferrer" className="button-link">LinkedIn</a>
-          <a href="https://github.com/colinleahey" target="_blank" rel="noopener noreferrer" className="button-link">GitHub</a>
+      {/* Hero Carousel */}
+      <Carousel fade interval={7500} pause={false}>
+        <Carousel.Item className="hero-carousel-item">
+          <img className="d-block w-100" src={triathlonImg} alt="Triathlon" />
+        </Carousel.Item>
+        <Carousel.Item className="hero-carousel-item">
+          <img className="d-block w-100" src={halfMarathonImg} alt="Half Marathon" />
+        </Carousel.Item>
+        <Carousel.Item className="hero-carousel-item">
+          <img className="d-block w-100" src={fishingImg} alt="Fishing in Costa Rica" />
+        </Carousel.Item>
+      </Carousel>
+
+      {/* About Me Section */}
+      <Container as="section" id="about" className="text-center py-5">
+        <div className="about-me-title">
+          <h2>About Me</h2>
+        </div>
+        <Image src={professionalHeadshot} roundedCircle className="profile-headshot mb-3" />
+        <h3>Colin Leahey</h3>
+        <div className="about-me-links mb-3">
+          <a href="https://github.com/colinleahey" target="_blank" rel="noopener noreferrer">GH</a>
+          <a href="https://www.linkedin.com/in/colin-leahey/" target="_blank" rel="noopener noreferrer">LI</a>
+        </div>
+        <Row className="justify-content-center">
+          <Col md={8}>
+            <p className="about-me-description">
+              This is placeholder text for the about me section. I will fill this out later with a short blurb about my passions, skills, and professional goals.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* Career Section */}
+      <section id="career" className="py-5 bg-light">
+        <div className="container text-center">
+            <div className="about-me-title">
+                <h2>Career & Education</h2>
+            </div>
+            <CareerTimeline />
         </div>
       </section>
-      
-      {/* All other content follows below */}
-      <main className="main-content">
-        <section id="about" className="content-section">
-          <h2>About Me</h2>
-          <p>
-            This is placeholder text for the about me section. I will fill this out later with a short blurb about my passions, skills, and professional goals.
-          </p>
-        </section>
 
-        <section id="projects" className="content-section">
-          <h2>Projects</h2>
-          <div className="project">
-            <h3>ChatDB</h3>
-            <p>A database chatbot that lets users query databases using natural language.</p>
-            <p><strong>Technologies:</strong> Python, MongoDB, SQL, Natural Language Processing</p>
+      {/* Projects Section */}
+      <section id="projects" className="py-5">
+        <div className="container">
+          <div className="about-me-title text-center">
+              <h2>Projects</h2>
           </div>
-        </section>
+          <Projects />
+        </div>
+      </section>
 
-        <section id="career" className="content-section">
-          <h2>Career</h2>
-          <p>
-            This is placeholder text for the career section. I will add my work experience and career objectives here later.
-          </p>
-        </section>
-
-        <section className="content-section">
-          <h2>Contact</h2>
-          <div className="contact-links">
-            <a href="mailto:cleahey@usc.edu">Email</a>
-            <a href="https://www.linkedin.com/in/colin-leahey/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/colinleahey" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </section>
-      </main>
     </>
   );
 }
