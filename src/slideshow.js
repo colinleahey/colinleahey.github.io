@@ -7,8 +7,8 @@ import 'swiper/css/autoplay';
 
 import { EffectFade, Autoplay } from 'swiper/modules';
 
-import triathlonImg from './assets/MTS2025.jpg';
-import halfMarathonImg from './assets/HOAGhalf.jpeg';
+import triathlonImg from './assets/triathlon.png';
+import halfMarathonImg from './assets/halfMarathon.jpg';
 import fishingImg from './assets/costaRicaFishing.png';
 
 const slideImages = [
