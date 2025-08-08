@@ -48,6 +48,11 @@ body {
   border: 4px solid #f0f0f0;
 }
 
+.about-me-links img {
+  width: 24px;
+  height: 24px;
+}
+
 .about-me-links a {
   display: inline-flex;
   justify-content: center;
@@ -170,4 +175,12 @@ body {
   color: white !important;
   font-size: 0.8rem;
   padding: 0.4em 0.8em;
+}
+
+.project-section-title {
+  margin-top: 1.5rem;
+  color: #343a40;
+  font-weight: 600;
+  border-left: 3px solid #dc2626;
+  padding-left: 0.75rem;
 }
