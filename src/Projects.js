@@ -39,6 +39,28 @@ const projectsData = [
       "Analyzed the final enriched dataset to find correlations between hauntings and external factors, presenting the findings through D3.js visualizations."
     ],
     myRole: "My contributions spanned data sourcing, geospatial analysis, image generation, and AI captioning. In the initial data enrichment phase, I was solely responsible for sourcing, cleaning, and integrating the National Register of Historic Places dataset. I developed a Python script (dataset_merging.ipynb) using GeoPandas and RTree to perform efficient spatial queries, calculating the proximity of over 80,000 historic sites to each haunted location. Following this, I designed and built the entire generative AI pipeline, writing the Python scripts to prompt Stable Diffusion for image generation and using a Dockerized Apache Tika container for automated image captioning."
+  },
+  {
+    title: 'Race Planning: Hydration Stress Calculator',
+    oneLiner: 'A data pipeline that analyzes athletic routes from GPX files to forecast hydration stress levels using real-world weather, elevation, and AI-driven shade analysis from street-level imagery.',
+    technologies: [
+      'Python', 'Celery', 'PostgreSQL', 'PostGIS', 'SQLAlchemy',
+      'PyTorch', 'Hugging Face Transformers',
+      'GeoAlchemy2', 'Shapely', 'Folium', 'gpxpy',
+      'Mapillary API', 'OpenWeatherMap API'
+    ],
+    links: [
+      { name: 'GitHub (coming soon)', url: 'https://github.com/colinleahey/hydration-stress-calculator' }
+    ],
+    goal: 'To provide athletes with a data-driven tool that quantifies the environmental stress of a given race course. The goal is to fuse multiple data sources—geospatial route data, weather forecasts, and AI-analyzed shade levels—into a single, actionable "Hydration Stress" score, helping athletes prepare their hydration and pacing strategies for future events.',
+    features: [
+      'Engineered a data pipeline to ingest and synthesize 5 distinct data types, including geospatial data, time-series weather forecasts, and unstructured street-level imagery via APIs.',
+      'Derived a shade_score feature from real-world street imagery using a Hugging Face computer vision model.',
+      'Uses a celery based distributed task queue to process all route points in parallel, reducing total analysis time to minutes.',
+      'Designed and implemented a weighted scoring algorithm to calculate hydration stress score at various intervals in a route.',
+      'Visualized the score on an interactive map to prepare my race-day strategy and complete a 70.3 with zero cramps.'
+    ],
+    myRole: 'As the sole developer, I designed and engineered the entire end-to-end application. This included architecting the data pipeline, setting up the PostgreSQL/PostGIS database schema, writing all Python code for data processing and AI analysis, integrating the external APIs, developing the final report visualization, and debugging the complete stack.'
   }
 ];
 
