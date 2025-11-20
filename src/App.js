@@ -2,7 +2,6 @@
 import './App.css';
 import AppNavbar from './Navbar'; 
 import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
-import CareerTimeline from './CareerTimeline';
 import Projects from './Projects';
 
 //Add actual Headshot!!!!!!
@@ -55,15 +54,7 @@ function App() {
         </Row>
       </Container>
 
-      {/* Career Section */}
-      <section id="career" className="py-5 bg-light">
-        <div className="container text-center">
-            <div className="about-me-title">
-                <h2>Career & Education</h2>
-            </div>
-            <CareerTimeline />
-        </div>
-      </section>
+      {/* Career Section removed per request */}
 
       {/* Projects Section */}
       <section id="projects" className="py-5">
